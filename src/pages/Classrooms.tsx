@@ -2,6 +2,7 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { School, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Classrooms = () => {
   return (
