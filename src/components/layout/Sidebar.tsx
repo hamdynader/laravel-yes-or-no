@@ -3,6 +3,7 @@ import { CalendarDays, Book, MessageSquare, School, LayoutDashboard } from "luci
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface SidebarProps {
   className?: string;
@@ -13,10 +14,10 @@ const Sidebar = ({ className }: SidebarProps) => {
 
   const menuItems = [
     { icon: LayoutDashboard, label: "لوحة التحكم", href: "/" },
-    { icon: CalendarDays, label: "الجداول الدراسية", href: "#" },
-    { icon: Book, label: "الدرجات", href: "#" },
-    { icon: MessageSquare, label: "التعليقات والتقييم", href: "#" },
-    { icon: School, label: "الفصول الدراسية", href: "#" },
+    { icon: CalendarDays, label: "الجداول الدراسية", href: "/schedules" },
+    { icon: Book, label: "الدرجات", href: "/grades" },
+    { icon: MessageSquare, label: "التعليقات والتقييم", href: "/feedback" },
+    { icon: School, label: "الفصول الدراسية", href: "/classrooms" },
   ];
 
   return (
@@ -48,10 +49,10 @@ const Sidebar = ({ className }: SidebarProps) => {
               )}
               asChild
             >
-              <a href={item.href}>
+              <Link to={item.href}>
                 <item.icon className={cn("h-5 w-5 ml-2", collapsed && "mx-0")} />
                 {!collapsed && <span>{item.label}</span>}
-              </a>
+              </Link>
             </Button>
           ))}
         </div>
