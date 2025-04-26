@@ -14,6 +14,7 @@ import Classrooms from "./pages/Classrooms";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProfileEdit from "./pages/ProfileEdit";
+import TeacherDashboard from "./pages/TeacherDashboard";
 import { useEffect, useState } from "react";
 
 const queryClient = new QueryClient();
