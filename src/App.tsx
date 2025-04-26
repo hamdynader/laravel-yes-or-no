@@ -46,6 +46,7 @@ const App = () => {
               <Route path="/grades" element={isAuthenticated ? <Grades /> : <Navigate to="/login" />} />
               <Route path="/feedback" element={isAuthenticated ? <Feedback /> : <Navigate to="/login" />} />
               <Route path="/classrooms" element={isAuthenticated ? <Classrooms /> : <Navigate to="/login" />} />
+              <Route path="/teacher-dashboard" element={isAuthenticated ? <TeacherDashboard /> : <Navigate to="/login" />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/profile-edit" element={isAuthenticated ? <ProfileEdit /> : <Navigate to="/login" />} />
